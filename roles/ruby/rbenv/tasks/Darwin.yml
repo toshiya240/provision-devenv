@@ -1,0 +1,8 @@
+---
+
+- name: Ensure rbenv is installed.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - rbenv
+    - ruby-build

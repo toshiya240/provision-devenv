@@ -1,0 +1,8 @@
+---
+
+- name: Ensure nodenv is installed.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - nodenv
+    - node-build

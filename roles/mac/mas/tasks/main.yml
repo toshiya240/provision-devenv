@@ -1,0 +1,15 @@
+---
+
+- name: Ensure mas-cli is installed.
+  homebrew:
+    name: mas
+  tags:
+    - mas
+
+- name: Ensure mas apps are installed.
+  mas:
+    appid: "{{ item.appid | default(item) }}"
+    state: "{{ item.state | default(omit) }}"
+  with_items: "{{ mas_apps | default([]) }}"
+  tags:
+    - mas

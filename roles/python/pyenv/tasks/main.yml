@@ -1,0 +1,7 @@
+---
+
+- name: "{{ ansible_os_family }}"
+  include_tasks: "{{ ansible_os_family }}.yml"
+  tags:
+    - python
+    - pyenv

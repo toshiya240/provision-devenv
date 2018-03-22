@@ -1,0 +1,21 @@
+---
+
+#
+# - <pkg-name>
+# or
+# - name: <pkg-name>
+#   version: <version>
+#   state: <present|absent|latest|forcereinstall>
+#
+pip2_pkgs:
+  - name: pip
+    state: latest
+  - pipenv
+
+pip3_pkgs:
+  - matplotlib
+  - neovim
+  - name: pip
+    state: latest
+  - pipenv
+  - Sphinx

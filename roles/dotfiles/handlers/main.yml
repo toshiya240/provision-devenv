@@ -1,0 +1,6 @@
+---
+
+- name: fisher
+  shell: fisher
+  args:
+    executable: fish

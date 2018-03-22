@@ -1,0 +1,9 @@
+---
+
+homeshick_castles:
+  - Shougo/dein.vim
+  - fisherman/fisherman
+  - zplug/zplug
+  - ~/Dropbox/GitBox/repos/fonts
+  - ~/Dropbox/GitBox/repos/secret
+  - toshiya240/dotfiles

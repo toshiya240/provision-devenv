@@ -1,0 +1,14 @@
+- hosts: localhost
+  connection: local
+  gather_facts: yes
+  roles:
+    - role: mac/homebrew
+      when: ansible_os_family == 'Darwin'
+    - role: mac/mas
+      when: ansible_os_family == 'Darwin'
+    - python/pip_pkgs
+    - python/pyenv
+    - ruby/gems
+    - ruby/rbenv
+    - node/nodenv
+    - dotfiles

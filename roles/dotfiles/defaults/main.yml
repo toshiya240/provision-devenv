@@ -1,0 +1,5 @@
+---
+
+homeshick_url: https://github.com/andsens/homeshick.git 
+homeshick_repos_root: ~/.homesick/repos
+homeshick_dst: "{{ homeshick_repos_root }}/homeshick"
