@@ -3,6 +3,4 @@
   mas:
     appid: "{{ item.appid | default(item) }}"
     state: "{{ item.state | default(omit) }}"
-  with_items: "{{ mas_apps | default([]) }}"
-  tags:
-    - mas
+  with_items: "{{ apps }}"

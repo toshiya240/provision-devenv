@@ -1,0 +1,21 @@
+---
+- name: Ensure homebrew repositories are taped.
+  homebrew_tap:
+    tap: "{{ item }}"
+  with_items:
+    - homebrew/core
+    - caskroom/cask
+  tags:
+    - base
+
+- name: Ensure git is installed.
+  homebrew:
+    name: git
+  tags:
+    - base
+
+- name: Ensure mas-cli is installed.
+  homebrew:
+    name: mas
+  tags:
+    - base

@@ -11,12 +11,8 @@ mas_apps:
     name: Xcode
   - appid: "435003921"
     name: Fantastical
-  - appid: "448925439"
-    name: Marked
   - appid: "405580712"
     name: StuffIt Expander
-  - appid: "445189367"
-    name: PopClip
   - appid: "412448059"
     name: ForkLift
   - appid: "823766827"

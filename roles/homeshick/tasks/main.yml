@@ -1,0 +1,9 @@
+---
+- name: Ensure homeshick is installed.
+  git:
+    repo: "{{ homeshick_url }}"
+    dest: "{{ homeshick_dst }}"
+    update: no
+    depth: 1
+  tags:
+    - homeshick

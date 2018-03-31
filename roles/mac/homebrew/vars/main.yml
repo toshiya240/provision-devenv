@@ -1,75 +1,48 @@
 ---
-
-homebrew_taps:
-  - homebrew/core
-  - caskroom/cask
-
 homebrew_packages:
-  provisioning:
-    - name: ansible
-  shell:
-    - name: fish
-  editor:
-    - name: vim
-      options: 'with-override-system-vi'
-  "cmdline utils":
-    - name: fzf
-    - name: htop
-    - name: lesspipe
-    - name: p7zip
-    - name: reattach-to-user-namespace
-    - name: source-highlight
-    - name: tmux
-    - name: tree
-  "text utils":
-    - name: clang-format
-    - name: dos2unix
-    - name: gawk
-    - name: gnu-sed
-    - name: jq
-    - name: pandoc
-    - name: the_silver_searcher
-  "img utils":
-    - name: imagemagick
-  git:
-    - name: ghq
-    - name: git
-    - name: hub
-    - name: tig
-  "net utils":
-    - name: curl
-    - name: wget
-  "db utils":
-    - name: sqlite
-  lang:
-    - name: go
-    - name: python
-    - name: ruby
-  "build tools":
-    - name: autoconf
-    - name: automake
-    - name: bison
-    - name: cmake
-    - name: gcc
-    - name: libtool
-    - name: make
-    - name: makedepend
-    - name: pkg-config
-  "debug tools":
-    - name: cgdb
-    - name: gdb
+  - group: provisioning
+    pkgs:
+      - name: ansible
+  - group: text utils
+    pkgs:
+      - name: clang-format
+  - group: git
+    pkgs:
+      - name: ghq
+      - name: git
+      - name: hub
+      - name: tig
+  - group: net utils
+    pkgs:
+      - name: curl
+      - name: wget
+  - group: db utils
+    pkgs:
+      - name: sqlite
+  - group: lang
+    pkgs:
+      - name: go
+  - group: build tools
+    pkgs:
+      - name: autoconf
+      - name: automake
+      - name: bison
+      - name: cmake
+      - name: gcc
+      - name: libtool
+      - name: make
+      - name: makedepend
+      - name: pkg-config
+  - group: debug tools
+    pkgs:
+      - name: cgdb
+      - name: gdb
 
 homebrew_cask_apps:
-  - alfred
   - appcleaner
   - box-sync
-  - dash
   - db-browser-for-sqlite
   - dropbox
-  - iterm2
-  - lacaille
   - onyx
-  - shiftit
   - virtualbox
-  - vlc
   - xquartz

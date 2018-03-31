@@ -1,0 +1,8 @@
+---
+
+- name: Ensure pyenv is installed.
+  homebrew:
+    name: pyenv
+  tags:
+    - python
+    - pyenv

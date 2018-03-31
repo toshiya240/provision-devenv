@@ -2,13 +2,22 @@
   connection: local
   gather_facts: yes
   roles:
+    - base
+    - dotfiles
+    - python2
+    - python3
+    - pyenv
+    - ruby
+    - rbenv
+    - nodenv
+    - vim
+    - fish
+    - zsh
+    - rust
+    - productivity
+    - documentation
+    - image_processing
     - role: mac/homebrew
       when: ansible_os_family == 'Darwin'
     - role: mac/mas
       when: ansible_os_family == 'Darwin'
-    - python/pip_pkgs
-    - python/pyenv
-    - ruby/gems
-    - ruby/rbenv
-    - node/nodenv
-    - dotfiles

@@ -1,0 +1,23 @@
+---
+- name: Ensure fish is installed.
+  homebrew:
+    name: fish
+  tags:
+    - fish
+
+- import_tasks: roles/homeshick/tasks/clone_castle.yml
+  vars:
+    castles:
+      - fisherman/fisherman
+      - toshiya240/dotfiles-fish
+  tags:
+    - fish
+
+- import_tasks: roles/homeshick/tasks/link_dotfiles.yml
+  vars:
+    castles:
+      - toshiya240/dotfiles-fish
+  notify:
+    - fisher
+  tags:
+    - fish

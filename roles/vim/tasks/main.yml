@@ -1,0 +1,29 @@
+---
+- name: Ensure vim is installed.
+  homebrew:
+    name: vim
+    options: 'with-override-system-vi'
+  tags:
+    - vim
+
+- import_tasks: roles/python3/tasks/pip.yml
+  vars:
+    pkgs:
+      - neovim
+  tags:
+    - vim
+
+- import_tasks: roles/homeshick/tasks/clone_castle.yml
+  vars:
+    castles:
+      - Shougo/dein.vim
+      - toshiya240/dotfiles-vim
+  tags:
+    - vim
+
+- import_tasks: roles/homeshick/tasks/link_dotfiles.yml
+  vars:
+    castles:
+      - toshiya240/dotfiles-vim
+  tags:
+    - vim

@@ -1,0 +1,8 @@
+---
+- name: Ensure dotfiles are linked.
+  shell: >
+    {{ homeshick_dst }}/bin/homeshick link {{ item }} --force --verbose
+    | awk '{ print $2 }' | sort | uniq
+  register: link_dotfiles_result
+  changed_when: "'symlink' in link_dotfiles_result.stdout"
+  with_items: "{{ castles }}"

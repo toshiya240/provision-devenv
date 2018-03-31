@@ -1,0 +1,7 @@
+---
+- name: Ensure RubyGems are installed.
+  gem:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default(omit) }}"
+    user_install: "{{ gem_user_install | default(omit) }}"
+  with_items: "{{ gems }}"

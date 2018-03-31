@@ -1,0 +1,40 @@
+---
+- import_tasks: roles/mac/homebrew/tasks/brew.yml
+  vars:
+    pkgs:
+      - name: dos2unix
+      - name: fzf
+      - name: gawk
+      - name: gnu-sed
+      - name: htop
+      - name: jq
+      - name: lesspipe
+      - name: p7zip
+      - name: reattach-to-user-namespace
+      - name: source-highlight
+      - name: the_silver_searcher
+      - name: tmux
+      - name: tree
+  tags:
+    - productivity
+
+# TODO: keyhac
+
+- import_tasks: roles/mac/homebrew/tasks/cask.yml
+  vars:
+    pkgs:
+      - alfred
+      - dash
+      - iterm2
+      - lacaille
+      - shiftit
+  tags:
+    - productivity
+
+- import_tasks: roles/mac/mas/tasks/mas.yml
+  vars:
+    apps:
+    - appid: "445189367"
+      name: PopClip
+  tags:
+    - productivity

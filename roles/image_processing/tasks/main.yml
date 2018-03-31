@@ -1,0 +1,37 @@
+---
+- import_tasks: roles/mac/homebrew/tasks/brew.yml
+  vars:
+    pkgs:
+      - name: imagemagick
+      - name: opencv
+  tags:
+    - image_processing
+
+- import_tasks: roles/mac/homebrew/tasks/cask.yml
+  vars:
+    pkgs:
+      - gimp
+      - vlc
+  tags:
+    - image_processing
+
+- import_tasks: roles/mac/mas/tasks/mas.yml
+  vars:
+    apps:
+      - appid: "404243625"
+        name: SketchBookExpress
+      - appid: "414298354"
+        name: ToyViewer
+      - appid: "540348655"
+        name: Monosnap
+      - appid: "425955336"
+        name: Skitch
+  tags:
+    - image_processing
+
+- import_tasks: roles/python3/tasks/pip.yml
+  vars:
+    pkgs:
+      - matplotlib
+  tags:
+    - image_processing

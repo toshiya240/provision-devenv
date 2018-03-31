@@ -1,0 +1,14 @@
+---
+
+- name: Ensure rustup-init is installed.
+  homebrew:
+    name: rustup-init
+  tags:
+    - rust
+
+- name: Ensure rust is installed.
+  command: rustup-init -y
+  args:
+    creates: ~/.cargo/bin/rustc
+  tags:
+    - rust

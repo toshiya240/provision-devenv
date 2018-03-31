@@ -1,29 +1,12 @@
 ---
-
-- name: Ensure homeshick is installed.
-  git:
-    repo: "{{ homeshick_url }}"
-    dest: "{{ homeshick_dst }}"
-    update: no
-    depth: 1
+- import_tasks: roles/homeshick/tasks/clone_castle.yml
+  vars:
+    castles: "{{ homeshick_castles | default([]) }}"
   tags:
     - dotfiles
 
-- name: Ensure castles are cloned.
-  shell: "{{ homeshick_dst }}/bin/homeshick clone --batch {{ item }}"
-  args:
-    creates: "{{ homeshick_repos_root }}/{{ item | basename }}"
-  with_items: "{{ homeshick_castles | default([]) }}"
-  tags:
-    - dotfiles
-
-- name: Ensure dotfiles are linked.
-  shell: >
-    {{ homeshick_dst }}/bin/homeshick link --force --verbose
-    | awk '{ print $2 }' | sort | uniq
-  register: link_dotfiles_result
-  changed_when: "'symlink' in link_dotfiles_result.stdout"
-  notify:
-    - fisher
+- import_tasks: roles/homeshick/tasks/link_dotfiles.yml
+  vars:
+    castles: ""
   tags:
     - dotfiles

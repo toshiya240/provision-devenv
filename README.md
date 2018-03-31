@@ -17,5 +17,5 @@ Usage
 ```sh
 $ prerequisites.sh
 # sync Dropbox
-$ ansible-playbook -i host localhost.yml
+$ ansible-playbook localhost.yml
 ```

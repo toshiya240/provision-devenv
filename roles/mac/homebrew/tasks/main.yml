@@ -1,15 +1,12 @@
 ---
-
-- name: Ensure homebrew repositories are taped.
-  homebrew_tap: tap={{ item }}
-  with_items: "{{ homebrew_taps | default([]) }}"
-  tags:
-    - homebrew
-
-- include_tasks: brew.yml
-  with_dict: "{{ homebrew_packages }}"
-  loop_control:
-    loop_var: group
+- name: Ensure homebrew pkgs are installed.
+  homebrew:
+    name: "{{ item.1.name | default(item.1) }}"
+    state: "{{ item.1.state | default(omit) }}"
+    install_options: "{{ item.1.options | default(omit) }}"
+  with_subelements:
+    - "{{ homebrew_packages | default([]) }}"
+    - pkgs
   tags:
     - homebrew
 

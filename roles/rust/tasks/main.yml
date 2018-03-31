@@ -1,0 +1,42 @@
+---
+
+- name: "{{ ansible_os_family }}"
+  include_tasks: "{{ ansible_os_family }}.yml"
+  tags:
+    - rust
+
+- name: Ensure racer is installed.
+  command: ~/.cargo/bin/cargo install racer
+  args:
+    creates: ~/.cargo/bin/racer
+  tags:
+    - rust
+
+- name: get path to sysroot
+  shell: ~/.cargo/bin/rustc --print sysroot
+  register: rust_sysroot
+  changed_when: false
+  tags:
+    - rust
+
+- name: Ensure toolchain share is linked to cargo(for man).
+  file:
+    src: "{{ rust_sysroot.stdout }}/share"
+    dest: ~/.cargo/share
+    state: link
+  tags:
+    - rust
+
+- name: Ensure rustfmt-preview is installed.
+  command: ~/.cargo/bin/rustup component add rustfmt-preview
+  args:
+    creates: "{{ rust_sysroot.stdout }}/bin/rustfmt"
+  tags:
+    - rust
+
+- name: Ensure rust-src is installed.
+  command: ~/.cargo/bin/rustup component add rust-src
+  args:
+    creates: "{{ rust_sysroot.stdout }}/lib/rustlib/src/rust/src"
+  tags:
+    - rust

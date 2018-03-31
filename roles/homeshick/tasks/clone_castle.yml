@@ -1,0 +1,6 @@
+---
+- name: Ensure castles are cloned.
+  shell: "{{ homeshick_dst }}/bin/homeshick clone --batch {{ item }}"
+  args:
+    creates: "{{ homeshick_repos_root }}/{{ item | basename }}"
+  with_items: "{{ castles }}"

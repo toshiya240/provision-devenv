@@ -1,0 +1,15 @@
+---
+- name: Ensure ruby is installed.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - ruby
+  tags:
+    - ruby
+
+- import_tasks: roles/ruby/tasks/gem.yml
+  vars:
+    gems:
+      - bundler
+  tags:
+    - ruby

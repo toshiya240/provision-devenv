@@ -1,0 +1,4 @@
+---
+dependencies:
+  - role: homeshick
+  - role: python3

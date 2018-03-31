@@ -1,0 +1,21 @@
+---
+- name: Ensure zsh is installed.
+  homebrew:
+    name: zsh
+  tags:
+    - zsh
+
+- import_tasks: roles/homeshick/tasks/clone_castle.yml
+  vars:
+    castles:
+      - zplug/zplug
+      - toshiya240/dotfiles-zsh
+  tags:
+    - zsh
+
+- import_tasks: roles/homeshick/tasks/link_dotfiles.yml
+  vars:
+    castles:
+      - toshiya240/dotfiles-zsh
+  tags:
+    - zsh
