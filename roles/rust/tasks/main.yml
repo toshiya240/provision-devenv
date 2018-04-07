@@ -1,7 +1,14 @@
 ---
+- name: Ensure rustup-init is installed.
+  homebrew:
+    name: rustup-init
+  tags:
+    - rust
 
-- name: "{{ ansible_os_family }}"
-  include_tasks: "{{ ansible_os_family }}.yml"
+- name: Ensure rust is installed.
+  command: rustup-init -y
+  args:
+    creates: ~/.cargo/bin/rustc
   tags:
     - rust
 

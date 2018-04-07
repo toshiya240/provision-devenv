@@ -1,7 +1,10 @@
 ---
-
-- name: "{{ ansible_os_family }}"
-  include_tasks: "{{ ansible_os_family }}.yml"
+- name: Ensure rbenv is installed.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - rbenv
+    - ruby-build
   tags:
     - ruby
     - rbenv

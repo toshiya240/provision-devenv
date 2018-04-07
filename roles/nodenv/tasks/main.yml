@@ -1,7 +1,7 @@
 ---
-
-- name: "{{ ansible_os_family }}"
-  include_tasks: "{{ ansible_os_family }}.yml"
-  tags:
-    - node
+- name: Ensure nodenv is installed.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
     - nodenv
+    - node-build

@@ -1,6 +1,6 @@
 - hosts: localhost
   connection: local
-  gather_facts: yes
+  gather_facts: no
   roles:
     - base
     - dotfiles
@@ -17,7 +17,5 @@
     - productivity
     - documentation
     - image_processing
-    - role: mac/homebrew
-      when: ansible_os_family == 'Darwin'
-    - role: mac/mas
-      when: ansible_os_family == 'Darwin'
+    - mac/homebrew
+    - mac/mas
