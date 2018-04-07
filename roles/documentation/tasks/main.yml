@@ -2,7 +2,9 @@
 - import_tasks: roles/mac/homebrew/tasks/brew.yml
   vars:
     pkgs:
-      - pandoc
+      - name: doxygen
+      - name: graphviz
+      - name: pandoc
   tags:
     - documentation
 
