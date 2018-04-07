@@ -15,7 +15,7 @@ Usage
 ====
 
 ```sh
-$ prerequisites.sh
+$ ./prerequisites.sh
 # sync Dropbox
-$ ansible-playbook localhost.yml
+$ ./provision.sh
 ```
