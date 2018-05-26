@@ -8,6 +8,14 @@
   tags:
     - documentation
 
+# エラー終了するがインストールはされている？
+# - import_tasks: roles/mac/homebrew/tasks/cask.yml
+#   vars:
+#     pkgs:
+#       - name: java
+#   tags:
+#     - documentation
+
 - import_tasks: roles/mac/mas/tasks/mas.yml
   vars:
     apps:
@@ -20,6 +28,10 @@
   vars:
     gems:
       - asciidoctor
+      - asciidoctor-diagram
+      - name: asciidoctor-pdf
+        pre_release: yes
+      - asciidoctor-pdf-cjk
       - kramdown
       - pygments.rb
   tags:
@@ -28,7 +40,6 @@
 - import_tasks: roles/python3/tasks/pip.yml
   vars:
     pkgs:
-      - Pygments
       - Sphinx
   tags:
     - documentation

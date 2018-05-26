@@ -3,5 +3,7 @@
   gem:
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default(omit) }}"
+    pre_release: "{{ item.pre_release | default(omit) }}"
+    build_flags: "{{ item.build_flags | default(omit) }}"
     user_install: "{{ gem_user_install | default(omit) }}"
   with_items: "{{ gems }}"
