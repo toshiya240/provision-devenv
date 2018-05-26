@@ -4,7 +4,7 @@
     tap: "{{ item }}"
   with_items:
     - homebrew/core
-    - caskroom/cask
+    - homebrew/cask
   tags:
     - base
 
