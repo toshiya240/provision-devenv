@@ -43,6 +43,7 @@ homebrew_cask_apps:
   - box-sync
   - db-browser-for-sqlite
   - dropbox
+  - karabiner-elements
   - onyx
   - virtualbox
   - xquartz
