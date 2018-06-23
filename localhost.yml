@@ -6,6 +6,7 @@
     - dotfiles
     - python2
     - python3
+    - python3/dev
     - pyenv
     - ruby
     - rbenv

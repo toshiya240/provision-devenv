@@ -1,0 +1,10 @@
+---
+
+- import_tasks: roles/python3/tasks/pip.yml
+  vars:
+    pkgs:
+      - autopep8
+      - flake8
+      - jedi
+  tags:
+    - python/dev
