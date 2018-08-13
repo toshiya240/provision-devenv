@@ -40,10 +40,12 @@ homebrew_packages:
 
 homebrew_cask_apps:
   - appcleaner
+  - avira-antivirus
   - box-sync
   - db-browser-for-sqlite
   - dropbox
   - karabiner-elements
+  - kawasemi
   - onyx
   - virtualbox
   - xquartz
