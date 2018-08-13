@@ -12,12 +12,12 @@
   tags:
     - rust
 
-- name: Ensure racer is installed.
-  command: ~/.cargo/bin/cargo install racer
-  args:
-    creates: ~/.cargo/bin/racer
-  tags:
-    - rust
+# - name: Ensure racer is installed.
+#   command: ~/.cargo/bin/cargo install racer
+#   args:
+#     creates: ~/.cargo/bin/racer
+#   tags:
+#     - rust
 
 - name: get path to sysroot
   shell: ~/.cargo/bin/rustc --print sysroot
