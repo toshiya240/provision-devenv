@@ -47,5 +47,5 @@ homebrew_cask_apps:
   - karabiner-elements
   - kawasemi
   - onyx
-  - virtualbox
+  # - virtualbox
   - xquartz
