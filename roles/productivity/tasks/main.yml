@@ -2,6 +2,7 @@
 - import_tasks: roles/mac/homebrew/tasks/brew.yml
   vars:
     pkgs:
+      - name: ctags
       - name: dos2unix
       - name: fzf
       - name: gawk
