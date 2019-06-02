@@ -12,14 +12,13 @@
       - name: lesspipe
       - name: p7zip
       - name: reattach-to-user-namespace
+      - name: sk
       - name: source-highlight
       - name: the_silver_searcher
       - name: tmux
       - name: tree
   tags:
     - productivity
-
-# TODO: keyhac
 
 - import_tasks: roles/mac/homebrew/tasks/cask.yml
   vars:
