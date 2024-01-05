@@ -39,13 +39,14 @@ homebrew_packages:
       - name: gdb
 
 homebrew_cask_apps:
+  - 1password
   - appcleaner
-  - avira-antivirus
   - box-sync
   - db-browser-for-sqlite
   - dropbox
+  - font-hackgen
+  - font-hackgen-nerd
   - karabiner-elements
-  - kawasemi
   - onyx
   # - virtualbox
   - xquartz

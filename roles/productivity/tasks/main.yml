@@ -4,6 +4,7 @@
     pkgs:
       - name: ctags
       - name: dos2unix
+      - name: fd
       - name: fzf
       - name: gawk
       - name: gnu-sed
@@ -12,6 +13,7 @@
       - name: lesspipe
       - name: p7zip
       - name: reattach-to-user-namespace
+      - name: rg
       - name: sk
       - name: source-highlight
       - name: the_silver_searcher
@@ -26,8 +28,7 @@
       - alfred
       - dash
       - iterm2
-      - lacaille
-      - shiftit
+      - rectangle
   tags:
     - productivity
 
