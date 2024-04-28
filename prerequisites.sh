@@ -5,7 +5,6 @@ if [[ ! -d /usr/local/Homebrew ]]; then
 fi
 
 brew install ansible
-brew tap caskroom/cask
 brew cask install dropbox
 
 echo "You should sync Dropbox."
