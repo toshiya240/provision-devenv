@@ -4,6 +4,7 @@
     pkgs:
       - name: imagemagick
       - name: opencv
+      - name: python-matplotlib
   tags:
     - image_processing
 
@@ -22,12 +23,5 @@
         name: ToyViewer
       - appid: "540348655"
         name: Monosnap
-  tags:
-    - image_processing
-
-- import_tasks: roles/python3/tasks/pip.yml
-  vars:
-    pkgs:
-      - matplotlib
   tags:
     - image_processing
