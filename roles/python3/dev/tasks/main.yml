@@ -1,10 +1,9 @@
 ---
 
-- import_tasks: roles/python3/tasks/pip.yml
+- import_tasks: roles/mac/homebrew/tasks/brew.yml
   vars:
     pkgs:
-      - autopep8
-      - flake8
-      - jedi
+      - name: autopep8
+      - name: flake8
   tags:
     - python/dev

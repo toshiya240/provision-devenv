@@ -7,13 +7,3 @@
   tags:
     - python
     - python3
-
-- import_tasks: roles/python3/tasks/pip.yml
-  vars:
-    pkgs:
-      - name: pip
-        state: latest
-      - pipenv
-  tags:
-    - python
-    - python3
