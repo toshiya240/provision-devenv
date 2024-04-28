@@ -28,6 +28,7 @@
       - alfred
       - dash
       - iterm2
+      - popclip
       - rectangle
   tags:
     - productivity
