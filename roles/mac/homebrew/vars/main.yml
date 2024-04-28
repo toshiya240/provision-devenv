@@ -27,7 +27,6 @@ homebrew_packages:
       - name: autoconf
       - name: automake
       - name: bison
-      - name: cmake
       - name: gcc
       - name: libtool
       - name: make
@@ -42,6 +41,7 @@ homebrew_cask_apps:
   - 1password
   - appcleaner
   - box-sync
+  - cmake
   - db-browser-for-sqlite
   - dropbox
   - font-hackgen
