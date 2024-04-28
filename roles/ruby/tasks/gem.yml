@@ -6,5 +6,6 @@
     pre_release: "{{ item.pre_release | default(omit) }}"
     build_flags: "{{ item.build_flags | default(omit) }}"
     user_install: "{{ gem_user_install | default(omit) }}"
+    version: "{{ item.version | default(omit) }}"
   become: yes
   with_items: "{{ gems }}"

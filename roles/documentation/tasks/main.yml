@@ -2,9 +2,16 @@
 - import_tasks: roles/mac/homebrew/tasks/brew.yml
   vars:
     pkgs:
-      - name: doxygen
       - name: graphviz
       - name: pandoc
+      - name: sphinx-doc
+  tags:
+    - documentation
+
+- import_tasks: roles/mac/homebrew/tasks/cask.yml
+  vars:
+    pkgs:
+      - name: doxygen
   tags:
     - documentation
 
@@ -30,17 +37,12 @@
     gems:
       - asciidoctor
       - asciidoctor-diagram
+      - name: css_parser
+        version: "1.12.0"
       - name: asciidoctor-pdf
         pre_release: yes
       - asciidoctor-pdf-cjk
       - kramdown
       - pygments.rb
-  tags:
-    - documentation
-
-- import_tasks: roles/python3/tasks/pip.yml
-  vars:
-    pkgs:
-      - Sphinx
   tags:
     - documentation
