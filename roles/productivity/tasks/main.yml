@@ -2,7 +2,6 @@
 - import_tasks: roles/mac/homebrew/tasks/brew.yml
   vars:
     pkgs:
-      - name: ctags
       - name: dos2unix
       - name: fd
       - name: fzf
@@ -19,6 +18,7 @@
       - name: the_silver_searcher
       - name: tmux
       - name: tree
+      - name: universal-ctags
   tags:
     - productivity
 
@@ -28,7 +28,6 @@
       - alfred
       - dash
       - iterm2
-      - popclip
       - rectangle
   tags:
     - productivity
