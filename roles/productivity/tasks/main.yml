@@ -32,11 +32,3 @@
       - rectangle
   tags:
     - productivity
-
-- import_tasks: roles/mac/mas/tasks/mas.yml
-  vars:
-    apps:
-    - appid: "445189367"
-      name: PopClip
-  tags:
-    - productivity

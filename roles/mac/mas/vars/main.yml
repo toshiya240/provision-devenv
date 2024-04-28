@@ -7,19 +7,9 @@
 #   state: <present|latest>
 #
 mas_apps:
-  - appid: "497799835"
-    name: Xcode
-  - appid: "435003921"
-    name: Fantastical
-  - appid: "405580712"
-    name: StuffIt Expander
-  - appid: "412448059"
-    name: ForkLift
   - appid: "823766827"
     name: OneDrive
   - appid: "1024640650"
     name: CotEditor
-  - appid: "443987910"
-    name: 1Password
   - appid: "406504852"
     name: Yep

@@ -18,14 +18,10 @@
 - import_tasks: roles/mac/mas/tasks/mas.yml
   vars:
     apps:
-      - appid: "404243625"
-        name: SketchBookExpress
       - appid: "414298354"
         name: ToyViewer
       - appid: "540348655"
         name: Monosnap
-      - appid: "425955336"
-        name: Skitch
   tags:
     - image_processing
 

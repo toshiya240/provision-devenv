@@ -16,13 +16,14 @@
 #   tags:
 #     - documentation
 
-- import_tasks: roles/mac/mas/tasks/mas.yml
-  vars:
-    apps:
-      - appid: "448925439"
-        name: Marked
-  tags:
-    - documentation
+# no longer avialable on App Store
+# - import_tasks: roles/mac/mas/tasks/mas.yml
+#   vars:
+#     apps:
+#       - appid: "448925439"
+#         name: Marked
+#   tags:
+#     - documentation
 
 - import_tasks: roles/ruby/tasks/gem.yml
   vars:
