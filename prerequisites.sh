@@ -1,8 +1,10 @@
 #!/bin/bash
 
-if [[ ! -d /usr/local/Homebrew ]]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [[ ! -d /opt/homebrew ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install ansible
 brew install --cask dropbox
