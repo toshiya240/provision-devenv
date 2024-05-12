@@ -47,6 +47,7 @@ homebrew_cask_apps:
   - font-hackgen
   - font-hackgen-nerd
   - karabiner-elements
+  - onedrive
   - onyx
   # - virtualbox
   - xquartz
