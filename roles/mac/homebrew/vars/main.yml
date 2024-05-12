@@ -35,12 +35,12 @@ homebrew_packages:
   - group: debug tools
     pkgs:
       - name: cgdb
-      - name: gdb
+      - name: aarch64-elf-gdb
 
 homebrew_cask_apps:
   - 1password
   - appcleaner
-  - box-sync
+  - box-drive
   - cmake
   - db-browser-for-sqlite
   - dropbox
