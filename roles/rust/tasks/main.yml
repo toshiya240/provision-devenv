@@ -47,3 +47,10 @@
     creates: "{{ rust_sysroot.stdout }}/lib/rustlib/src/rust/src"
   tags:
     - rust
+
+- name: Ensure rust-analyzer is installed.
+  command: ~/.cargo/bin/rustup component add rust-analyzer
+  args:
+    creates: "{{ rust_sysroot.stdout }}/bin/rust-analyzer"
+  tags:
+    - rust
